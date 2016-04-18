@@ -63,6 +63,17 @@ mcaLayer1.locations = [0.4, 0.90]
 mcaLayer1.startPoint = CGPointMake(leftStart, 0.0)
 mcaLayer1.endPoint = CGPointMake( 1 - leftStart, 0.8)
 
+// apply layers
+let mViewTop = UIView(frame: CGRectMake(0, 0, 360, 360))
+
+mcaLayer1.frame = mViewTop.frame
+mViewTop.backgroundColor = UIColor.whiteColor()
+mViewTop.layer.masksToBounds = true
+mViewTop.layer.insertSublayer(mcaLayer1, atIndex: 0)
+
+mViewTop
+
+
 // top right
 let mcaLayer2 = CAGradientLayer()
 mcaLayer2.colors = ColorSet().setTop
@@ -87,7 +98,7 @@ mcaLayer4.endPoint = CGPointMake(1-leftStart, 0.1)
 
 
 // apply layers
-let mViewTop = UIView(frame: CGRectMake(0, 0, 360, 360))
+//let mViewTop = UIView(frame: CGRectMake(0, 0, 360, 360))
 
 mcaLayer1.frame = mViewTop.frame
 mcaLayer2.frame = mViewTop.frame
@@ -99,7 +110,7 @@ mViewTop.layer.masksToBounds = true
 mViewTop.layer.insertSublayer(mcaLayer1, atIndex: 0)
 //mViewTop.layer.insertSublayer(mcaLayer2, atIndex: 0)
 //mViewTop.layer.insertSublayer(mcaLayer3, atIndex: 0)
-mViewTop.layer.insertSublayer(mcaLayer4, atIndex: 0)
+//mViewTop.layer.insertSublayer(mcaLayer4, atIndex: 0)
 
 mViewTop
 
